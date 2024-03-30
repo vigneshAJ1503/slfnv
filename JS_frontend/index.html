@@ -1,0 +1,51 @@
+<style>
+    .overlay {
+        background-color: black;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        opacity: 0.8;
+        z-index: 1;
+        display: none;
+    }
+    
+    .popupbox {
+        position: absolute;
+        z-index: 2;
+        background-color: white;
+        width: 40%;
+        padding: 10px;
+        left: 25%;
+        top: 10%;
+        border-radius: 10px;
+        display: none;
+    }
+</style>
+<button onclick="sho()">show</button>
+<div class="overlay"></div>
+<div class="popupbox">
+    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, vitae!arum molestias fugiat ex, corrupti epellat quos.</p>
+    <button onclick="clo() ">close</button>
+</div>
+
+
+
+<script>
+    var overlay = document.querySelector(".overlay ")
+    var popupbox = document.querySelector(".popupbox ")
+
+
+
+    function sho() {
+        popupbox.style.display = "block "
+        overlay.style.display = "block "
+    }
+
+
+    function clo() {
+        overlay.style.display = "none"
+        popupbox.style.display = "none"
+    }
+</script>
